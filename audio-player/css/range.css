@@ -1,0 +1,45 @@
+.range__progress-bar {
+  appearance: none;
+
+  z-index: 4;
+  height: 10px;
+  background: var(--black);
+  width: 100%;
+
+  border-radius: 30px;
+}
+
+.range__progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -3px;
+  margin-left: 0px;
+  height: 10px;
+  width: 10px;
+  border: 0;
+  background: -webkit-linear-gradient(45deg, var(--grey), var(--primary));
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.range__progress-bar::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  max-height: 10px;
+  border-radius: 30px;
+}
+
+.range__progress-bar:focus {
+  outline: none;
+}
+
+.range__time {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.range__end-time {
+  color: var(--primary);
+}
