@@ -14,27 +14,36 @@ export class AudioPlayer {
   #progressBar;
 
   #songIndex = 0;
+
   #songs = [
-    "./assets/music/beyonce.mp3",
-    "./assets/music/dontstartnow.mp3",
-    "./assets/music/edible-autopsy.mp3",
-    "./assets/music/necromancer.mp3",
-  ];
-  #songImages = [
-    "./assets/images/lemonade.png",
-    "./assets/images/dontstartnow.png",
-    "./assets/images/edible-autopsy.jpg",
-    "./assets/images/necromancer.jpg",
-  ];
-  #songArtists = ["Beyonce", "Dua Lipa", "Cannibal Corpse", "Sepultura"];
-  #songTitles = [
-    "Don't Hurt Yourself",
-    "Don't Start Now",
-    "Edible Autopsy",
-    "Necromancer",
+    {
+      src: "./assets/music/beyonce.mp3",
+      artist: "Beyonce",
+      title: "Don't Hurt Yourself",
+      image: "./assets/images/lemonade.png",
+    },
+
+    {
+      src: "./assets/music/dontstartnow.mp3",
+      artist: "Dua Lipa",
+      title: "Don't Start Now",
+      image: "./assets/images/dontstartnow.png",
+    },
+    {
+      src: "./assets/music/edible-autopsy.mp3",
+      artist: "Cannibal Corpse",
+      title: "Edible Autopsy",
+      image: "./assets/images/edible-autopsy.jpg",
+    },
+    {
+      src: "./assets/music/necromancer.mp3",
+      artist: "Sepultura",
+      title: "Necromancer",
+      image: "./assets/images/necromancer.jpg",
+    },
   ];
 
-  #playing = true;
+  #isPlaying = true;
 
   #intervalId;
 
@@ -67,18 +76,20 @@ export class AudioPlayer {
   }
 
   #playPause = () => {
-    if (this.#playing) {
-      this.#playPauseButton.style.backgroundImage = "url(./assets/icons/pause.png)";
+    if (this.#isPlaying) {
+      this.#playPauseButton.style.backgroundImage =
+        "url(./assets/icons/pause.png)";
       this.#songImage.classList.add("player__top--active");
 
       this.#song.play();
-      this.#playing = false;
+      this.#isPlaying = false;
     } else {
-      this.#playPauseButton.style.backgroundImage = "url(./assets/icons/play.png)";
+      this.#playPauseButton.style.backgroundImage =
+        "url(./assets/icons/play.png)";
       this.#songImage.classList.remove("player__top--active");
 
       this.#song.pause();
-      this.#playing = true;
+      this.#isPlaying = true;
     }
   };
 
@@ -87,14 +98,14 @@ export class AudioPlayer {
 
     if (this.#songIndex >= this.#songs.length) this.#songIndex = 0;
 
-    this.#song.src = this.#songs[this.#songIndex];
-    this.#songImage.src = this.#songImages[this.#songIndex];
-    this.#background.src = this.#songImages[this.#songIndex];
+    this.#song.src = this.#songs[this.#songIndex].src;
+    this.#songImage.src = this.#songs[this.#songIndex].image;
+    this.#background.src = this.#songs[this.#songIndex].image;
 
-    this.#songArtist.innerHTML = this.#songArtists[this.#songIndex];
-    this.#songTitle.innerHTML = this.#songTitles[this.#songIndex];
+    this.#songArtist.innerHTML = this.#songs[this.#songIndex].artist;
+    this.#songTitle.innerHTML = this.#songs[this.#songIndex].title;
 
-    this.#playing = true;
+    this.#isPlaying = true;
 
     this.#playPause();
   };
@@ -102,18 +113,16 @@ export class AudioPlayer {
   #previousSong = () => {
     this.#songIndex--;
 
-    if (this.#songIndex < 0) {
-      this.#songIndex = this.#songs.length - 1;
-    }
+    if (this.#songIndex < 0) this.#songIndex = this.#songs.length - 1;
 
-    this.#song.src = this.#songs[this.#songIndex];
-    this.#songImage.src = this.#songImages[this.#songIndex];
-    this.#background.src = this.#songImages[this.#songIndex];
+    this.#song.src = this.#songs[this.#songIndex].src;
+    this.#songImage.src = this.#songs[this.#songIndex].image;
+    this.#background.src = this.#songs[this.#songIndex].image;
 
-    this.#songArtist.innerHTML = this.#songArtists[this.#songIndex];
-    this.#songTitle.innerHTML = this.#songTitles[this.#songIndex];
+    this.#songArtist.innerHTML = this.#songs[this.#songIndex].artist;
+    this.#songTitle.innerHTML = this.#songs[this.#songIndex].title;
 
-    this.#playing = true;
+    this.#isPlaying = true;
     this.#playPause();
   };
 
@@ -125,9 +134,9 @@ export class AudioPlayer {
       Math.floor(this.#song.currentTime)
     );
 
-    if (this.#durationTime.innerHTML === "NaN:NaN") {
+    if (this.#durationTime.innerHTML === "NaN:NaN")
       this.#durationTime.innerHTML = "0:00";
-    } else {
+    else {
       this.#durationTime.innerHTML = this.#formatTime(
         Math.floor(this.#song.duration)
       );
