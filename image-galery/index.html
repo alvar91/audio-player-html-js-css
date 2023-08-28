@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Pairs Game</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <input
+          id="level"
+          class="number"
+          type="number"
+          name="number"
+          placeholder="Количество карточек"
+        />
+        <button id="startButton" class="button">Начать игру</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container main__inner">
+        <p class="main__output" id="output">
+          Выберите четное количество карточек от 2 до 10 и начните игру
+        </p>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <a class="link" href="https://rs.school/js-stage0/">
+          <img class="logo" src="./images/icons/rs-school.svg" alt="Logo" />
+        </a>
+        <span>
+          Created by:
+          <a class="link" href="https://github.com/alvar91">@alvar91</a>
+          2023
+        </span>
+      </div>
+    </footer>
+    <script type="module" src="./scripts/index.js"></script>
+  </body>
+</html>
