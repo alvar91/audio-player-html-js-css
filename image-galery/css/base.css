@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--dark);
+  background-color: var(--light-grey);
+}
+
+.link {
+  color: var(--primary);
+  text-decoration: none;
+  transition: opacity var(--transition-duration) var(--transition-function);
+}
+
+.link:hover {
+  opacity: 0.5;
+  transition: opacity var(--transition-duration) var(--transition-function);
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
