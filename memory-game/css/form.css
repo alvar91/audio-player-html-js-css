@@ -1,0 +1,7 @@
+.number {
+  padding: 14px;
+  width: 200px;
+  border: 1px solid var(--primary);
+  font-size: 16px;
+  color: var(--primary);
+}
