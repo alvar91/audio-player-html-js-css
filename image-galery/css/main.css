@@ -1,0 +1,9 @@
+.main__inner {
+    display: flex;
+    justify-content: center;
+}
+
+.main__output {
+    font-size: 20px;
+    color: var(--primary);
+}
