@@ -1,0 +1,12 @@
+:root {
+  /* Colors */
+  --light: #fff;
+  --light-grey: #e5e5e5;
+  --txt-color: #b0b0b0;
+  --dark: #333;
+  --primary: #9873ff;
+
+  /* Transitions and Animations */
+  --transition-duration: 0.3s;
+  --transition-function: ease;
+}
