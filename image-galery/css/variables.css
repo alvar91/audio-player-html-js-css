@@ -1,0 +1,30 @@
+:root {
+  /* Colors */
+  --light: #fff;
+  --grey: rgb(133, 133, 133);
+  --dark: rgb(40, 40, 40);
+  --black: #000;
+  --primary: orange;
+
+  --bg-color: var(--light);
+  --title-color: var(--dark);
+
+  /* Fonts */
+  --font-family-default: "Arial", sans-serif;
+  --font-family-custom: "Montserrat";
+
+  --font-family: var(--font-family-custom), var(--font-family-default);
+
+  --font-line-height-small: 2rem;
+
+  --font-size-base: 20px;
+  --font-line-height-base: 20px;
+  --font-weight-base: 400;
+
+  /* Transitions and Animations */
+  --transition-duration: 0.3s;
+  --transition-function: ease;
+
+  /* Gaps */
+  --standart-gap: 20px;
+}

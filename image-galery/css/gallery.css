@@ -1,0 +1,26 @@
+.gallery {
+  margin-bottom: var(--standart-gap);
+}
+
+.gallery__list {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: var(--standart-gap);
+}
+
+.gallery__item {
+  display: flex;
+  width: 400px;
+}
+
+.gallery__image {
+  width: 100%;
+  transition: transform var(--transition-duration) var(--transition-function);
+}
+
+.gallery__image:hover {
+  transform: scale(0.9);
+  transition: transform var(--transition-duration) var(--transition-function);
+}
