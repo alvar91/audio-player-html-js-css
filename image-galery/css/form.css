@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+}
+
+.form__input {
+  padding: 10px;
+  border: 4px solid var(--primary);
+  border-radius: 10px 0 0 10px;
+
+  font-size: var(--font-size-base);
+  color: var(--primary);
+}
+
+.form__button {
+    border: 4px solid var(--primary);
+    border-radius: 0 10px 10px 0;
+
+    font-size: var(--font-size-base);
+    color: var(--dark);
+
+    background-color: var(--primary);
+    cursor: pointer;
+}
