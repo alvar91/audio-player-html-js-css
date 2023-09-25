@@ -22,12 +22,17 @@ export class AudioPlayer {
       title: "Don't Hurt Yourself",
       image: "./assets/images/lemonade.png",
     },
-
     {
       src: "./assets/music/dontstartnow.mp3",
       artist: "Dua Lipa",
       title: "Don't Start Now",
       image: "./assets/images/dontstartnow.png",
+    },
+    {
+      src: "./assets/music/praise-of-death.mp3",
+      artist: "Slayer",
+      title: "Praise of Death",
+      image: "./assets/images/praise-of-death.jpg",
     },
     {
       src: "./assets/music/edible-autopsy.mp3",
@@ -40,6 +45,12 @@ export class AudioPlayer {
       artist: "Sepultura",
       title: "Necromancer",
       image: "./assets/images/necromancer.jpg",
+    },
+    {
+      src: "./assets/music/dead-by-dawn.mp3",
+      artist: "Deicide",
+      title: "Dead by Dawn",
+      image: "./assets/images/dead-by-dawn.jpg",
     },
   ];
 
@@ -134,7 +145,10 @@ export class AudioPlayer {
       Math.floor(this.#song.currentTime)
     );
 
-    if (this.#durationTime.innerHTML === "NaN:NaN")
+    if (
+      isNaN(this.#song.duration) ||
+      this.#durationTime.innerHTML === "NaN:NaN"
+    )
       this.#durationTime.innerHTML = "0:00";
     else {
       this.#durationTime.innerHTML = this.#formatTime(
