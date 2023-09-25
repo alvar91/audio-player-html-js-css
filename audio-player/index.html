@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="./assets//icons/favicon.ico"
+    />
     <title>Audio Player</title>
   </head>
   <body class="page">
@@ -22,17 +27,21 @@
               src="./assets/images/lemonade.png"
             />
 
-            <div class="player__buttom">
+            <div class="player__button">
               <div class="player__controls">
                 <button class="player__play-pause js-play-pause"></button>
 
                 <div class="player__inner">
                   <p class="player__artist js-song-artist">Beyonce</p>
-                  <p class="player__song-name js-song-title">Don't Hurt Yourself</p>
+                  <p class="player__song-name js-song-title">
+                    Don't Hurt Yourself
+                  </p>
                 </div>
 
                 <div class="player__buttons">
-                  <button class="player__previous-song js-previous-song"></button>
+                  <button
+                    class="player__previous-song js-previous-song"
+                  ></button>
                   <button class="player__next-song js-next-song"></button>
                 </div>
               </div>
@@ -47,26 +56,30 @@
                 />
 
                 <div class="range__time">
-                    <span class="range__start-time js-current-time">0:00</span>
-                    <span class="range__end-time js-duration-time">0:00</span>
+                  <span class="range__start-time js-current-time">0:00</span>
+                  <span class="range__end-time js-duration-time">0:00</span>
                 </div>
+              </div>
+
+              <div class="player__footer">
+                <a class="link" href="https://rs.school/js-stage0/">
+                  <img
+                    class="logo"
+                    src="./assets/icons/rs-school.svg"
+                    alt="Logo"
+                  />
+                </a>
+                <span class="player__text">
+                  Created by:
+                  <a class="link" href="https://github.com/alvar91">@alvar91</a>
+                  2023
+                </span>
               </div>
             </div>
           </div>
         </section>
       </div>
     </main>
-    <footer class="footer">
-      <a class="link" href="https://rs.school/js-stage0/">
-        <img class="logo" src="./assets/icons/rs-school.svg" alt="Logo" />
-      </a>
-      <span>
-        Created by:
-        <a class="link" href="https://github.com/alvar91">@alvar91</a>
-        2023
-      </span>
-    </footer>
-
     <script type="module" defer src="./js/script.js"></script>
   </body>
 </html>
