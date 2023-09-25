@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   (function () {
-    const unsplashKey = "XlEFZNo448eCjf1xBGJMI2mLBHDiy-XKlpGgOPiGhZ8";
+    const unsplashKey = "WntP27Ue-I5ibIP914RypeNizeWqcXLRC9JmhMbgKI0";
 
     const $container = document.querySelector(".js-gallery");
 
